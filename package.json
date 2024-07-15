@@ -1,0 +1,22 @@
+{
+  "homepage": "https://irashovdra.github.io/GAME-OF-TEENS/",
+  "name": "game-of-teens",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/index.html --no-cache",
+    "predeploy": "npm run build",
+    "build": "parcel build ./src/index.html --no-cache --public-url /game-of-teens/",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "parcel": "^2.12.0"
+  },
+  "devDependencies": {
+    "parcel-reporter-clean-dist": "^1.0.4"
+  }
+}
