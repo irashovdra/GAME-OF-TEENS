@@ -1,5 +1,4 @@
 .header {
-  background-color: #0072b5;
   padding: 1rem 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -24,18 +23,18 @@
 
 .header-list__link {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .header-list__link:hover,
 .header-list__link:focus {
-  color: #f5df4d;
+  color: #0089f7;
 }
 
 .header-list__link:active {
-  color: #f5df4d;
+  color: #0089f7;
 }
 
 @media (max-width: 768px) {
