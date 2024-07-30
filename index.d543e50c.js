@@ -1,0 +1,2 @@
+const e=document.querySelector(".submit-btn"),t=document.querySelector(".result");e.addEventListener("click",function(){let e=document.querySelectorAll('.answers input[type="radio"]:checked'),o=0,r=["a","b","a","b","b","b"];e.forEach((e,t)=>{e.value===r[t]&&o++}),t.textContent=`You scored ${o} out of 6 points!`,6===o?t.style.color="green":o>=4?t.style.color="orange":t.style.color="red"});
+//# sourceMappingURL=index.d543e50c.js.map
