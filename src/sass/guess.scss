@@ -1,0 +1,53 @@
+.guess-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.guess-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.guess-clue {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.guess-clue-text {
+  font-weight: bold;
+}
+
+.guess-input {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.guess-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.guess-button:hover {
+  background-color: #0056b3;
+}
+
+.guess-feedback {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.guess-score {
+  font-size: 18px;
+  font-weight: bold;
+}
