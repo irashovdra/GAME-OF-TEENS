@@ -1,37 +1,43 @@
-.fill-in-the-blanks-container {
-  max-width: 600px;
+.fill-in {
   padding: 20px;
+  background-color: white;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/* Game title styling */
-.game-title {
+.fill-in__title {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 30px;
+  font-weight: bold;
   text-align: center;
-  color: #333;
 }
 
-/* Instructions styling */
-.game-instructions {
+.fill-in__instructions {
   text-align: center;
   margin-bottom: 20px;
   color: #666;
+  font-size: 20px;
 }
 
-/* Sentence container styling */
-.sentence-container {
+.sentence {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Sentence text styling */
-.sentence-text {
+.sentence__text {
   font-size: 18px;
   color: #333;
+  margin-right: 10px;
 }
 
-/* Input field styling */
-.word-input {
+.sentence__input {
   border: 2px solid #ddd;
   border-radius: 4px;
   padding: 5px;
@@ -39,34 +45,30 @@
   transition: border-color 0.3s ease;
 }
 
-/* Input field focus styling */
-.word-input:focus {
+.sentence__input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-/* Button styling */
-.check-answers-button {
+.fill-in__check {
   display: block;
-  width: 100%;
+  width: 150px;
   padding: 10px;
   margin-top: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Button hover styling */
-.check-answers-button:hover {
-  background-color: #0056b3;
+.fill-in__check:hover {
+  background-color: #0089f7;
 }
 
-/* Feedback message styling */
-.feedback-message {
+.fill-in__feedback {
   margin-top: 20px;
   font-size: 16px;
   text-align: center;

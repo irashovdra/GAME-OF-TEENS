@@ -3,15 +3,12 @@ class WordScrambleGame {
     this.words = words;
     this.currentWordIndex = 0;
     this.correctGuesses = 0;
-    this.scrambledWordElement = document.querySelector(".word");
-    this.hintElement = document.querySelector(".hint span");
-    this.guessInputElement = document.querySelector(".guess-input");
-    this.scoreElement = document.querySelector(".score");
+    this.scrambledWordElement = document.querySelector(".word-scramble__word");
+    this.hintElement = document.querySelector(".word-scramble__hint span");
+    this.guessInputElement = document.querySelector(".word-scramble__input");
+    this.scoreElement = document.querySelector(".word-scramble__score");
     this.refreshButton = document.querySelector(".refresh-word");
     this.checkButton = document.querySelector(".check-word");
-    this.modal = document.getElementById("myModal");
-    this.modalText = document.getElementById("modalText");
-    this.closeButton = document.querySelector(".close");
 
     this.init();
   }
@@ -19,12 +16,6 @@ class WordScrambleGame {
   init() {
     this.refreshButton.addEventListener("click", () => this.refreshWord());
     this.checkButton.addEventListener("click", () => this.checkGuess());
-    this.closeButton.addEventListener("click", () => this.closeModal());
-    window.addEventListener("click", (event) => {
-      if (event.target == this.modal) {
-        this.closeModal();
-      }
-    });
 
     this.nextWord();
   }
@@ -50,7 +41,6 @@ class WordScrambleGame {
   }
 
   refreshWord() {
-    // Rescramble the current word
     const current = this.words[this.currentWordIndex - 1];
     this.scrambledWordElement.textContent = this.scrambleWord(current.word);
     this.guessInputElement.value = "";
@@ -63,9 +53,12 @@ class WordScrambleGame {
 
     if (guess === currentWord) {
       this.correctGuesses++;
-      this.showModal("Correct!", true);
+      this.displayMessage("Correct!", true);
     } else {
-      this.showModal(`Wrong! The correct word was "${currentWord}".`, false);
+      this.displayMessage(
+        `Wrong! The correct word was "${currentWord}".`,
+        false
+      );
     }
 
     this.updateScore();
@@ -76,20 +69,13 @@ class WordScrambleGame {
     this.scoreElement.textContent = this.correctGuesses;
   }
 
-  showModal(message, isCorrect) {
-    this.modalText.textContent = message;
+  displayMessage(message, isCorrect) {
+    // Simple alert message for displaying feedback
     if (isCorrect) {
-      this.modalText.classList.remove("modal-wrong");
-      this.modalText.classList.add("modal-correct");
+      alert(message);
     } else {
-      this.modalText.classList.remove("modal-correct");
-      this.modalText.classList.add("modal-wrong");
+      alert(message);
     }
-    this.modal.style.display = "block";
-  }
-
-  closeModal() {
-    this.modal.style.display = "none";
   }
 
   showFinalScore() {
@@ -98,9 +84,8 @@ class WordScrambleGame {
     this.guessInputElement.style.display = "none";
     this.refreshButton.style.display = "none";
     this.checkButton.style.display = "none";
-    this.showModal(
-      `You guessed ${this.correctGuesses} out of ${this.words.length} words correctly!`,
-      true
+    alert(
+      `You guessed ${this.correctGuesses} out of ${this.words.length} words correctly!`
     );
   }
 }
