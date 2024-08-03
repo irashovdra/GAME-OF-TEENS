@@ -1,12 +1,12 @@
 {
   "homepage": "https://irashovdra.github.io/GAME-OF-TEENS/",
-  "name": "game-of-teens",
+  "name": "GAME-OF-TEENS",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "parcel ./src/index.html --no-cache",
     "predeploy": "npm run build",
-    "build": "parcel build ./src/index.html --no-cache --public-url /game-of-teens/",
+    "build": "parcel build ./src/index.html --no-cache --public-url /GAME-OF-TEENS/",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
