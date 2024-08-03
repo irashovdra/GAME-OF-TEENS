@@ -3,9 +3,10 @@
 }
 
 .game__title {
-  margin-bottom: 20px;
-  color: #333;
-  font-size: 24px;
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .game__board {
@@ -53,7 +54,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #333;
+  background-color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -61,5 +62,5 @@
 }
 
 .game__reset-button:hover {
-  background-color: #555;
+  background-color: #0089f7;
 }

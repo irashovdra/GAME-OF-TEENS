@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { word: "dark", match: "shadowy" },
   ];
 
-  // Duplicate and shuffle the cards
   let gameArray = [
     ...cardsArray,
     ...cardsArray.map((card) => ({ word: card.match, match: card.word })),

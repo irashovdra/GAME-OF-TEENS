@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const checkAnswersButton = document.querySelector(".check-answers-button");
-  const feedbackMessage = document.querySelector(".feedback-message");
+  const checkAnswersButton = document.querySelector(".fill-in__check");
+  const feedbackMessage = document.querySelector(".fill-in__feedback");
 
   checkAnswersButton.addEventListener("click", () => {
-    const wordInputs = document.querySelectorAll(".word-input");
+    const wordInputs = document.querySelectorAll(".sentence__input");
     let correctCount = 0;
 
     wordInputs.forEach((input) => {
