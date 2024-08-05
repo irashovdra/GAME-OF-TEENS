@@ -1,3 +1,4 @@
+/* Base Styles */
 .hero {
   background-color: rgb(0, 0, 0);
   background-image: url(../images/hero-bg.jpg);
@@ -25,4 +26,40 @@
   color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .hero {
+    height: 300px;
+    padding: 30px 15px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    height: 400px;
+    padding: 40px 20px;
+  }
+
+  .hero__title {
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    max-width: 80%;
+  }
 }

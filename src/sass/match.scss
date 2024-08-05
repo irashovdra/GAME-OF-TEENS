@@ -1,5 +1,7 @@
+/* Base Styles */
 .game {
   text-align: center;
+  padding: 20px;
 }
 
 .game__title {
@@ -63,4 +65,52 @@
 
 .game__reset-button:hover {
   background-color: #0089f7;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .game__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .game__board {
+    grid-template-columns: repeat(2, 120px);
+    grid-gap: 8px;
+  }
+
+  .game__card {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+
+  .game__reset-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .game__title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .game__board {
+    grid-template-columns: repeat(3, 140px);
+    grid-gap: 10px;
+  }
+
+  .game__card {
+    width: 140px;
+    height: 140px;
+    font-size: 17px;
+  }
+
+  .game__reset-button {
+    padding: 9px 18px;
+    font-size: 15px;
+  }
 }

@@ -1,8 +1,10 @@
+/* Base Styles */
 .fill-in {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
 }
 
 .fill-in__title {
@@ -25,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .sentence__text {
@@ -39,6 +42,7 @@
   padding: 5px;
   width: 100px;
   transition: border-color 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .sentence__input:focus {
@@ -68,4 +72,62 @@
   margin-top: 20px;
   font-size: 16px;
   text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .fill-in__title {
+    font-size: 28px;
+  }
+
+  .fill-in__instructions {
+    font-size: 16px;
+  }
+
+  .sentence__text {
+    font-size: 16px;
+  }
+
+  .sentence__input {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  .fill-in__check {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .fill-in__feedback {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .fill-in__title {
+    font-size: 32px;
+  }
+
+  .fill-in__instructions {
+    font-size: 18px;
+  }
+
+  .sentence__text {
+    font-size: 17px;
+  }
+
+  .sentence__input {
+    width: 90px;
+    font-size: 15px;
+  }
+
+  .fill-in__check {
+    width: 130px;
+    font-size: 17px;
+  }
+
+  .fill-in__feedback {
+    font-size: 15px;
+  }
 }

@@ -100,3 +100,77 @@
   margin-top: 20px;
   text-align: center;
 }
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .word-scramble__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .word-scramble__content {
+    margin: 15px 10px 25px;
+  }
+
+  .word-scramble__word {
+    font-size: 24px;
+    letter-spacing: 16px;
+    margin-right: -16px;
+  }
+
+  .word-scramble__hint {
+    font-size: 16px;
+  }
+
+  .word-scramble__input {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  .word-scramble__btn {
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  .score-area {
+    font-size: 18px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .word-scramble__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .word-scramble__content {
+    margin: 20px 15px 30px;
+  }
+
+  .word-scramble__word {
+    font-size: 28px;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+
+  .word-scramble__hint {
+    font-size: 17px;
+  }
+
+  .word-scramble__input {
+    height: 55px;
+    font-size: 17px;
+    padding: 0 14px;
+  }
+
+  .word-scramble__btn {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  .score-area {
+    font-size: 19px;
+  }
+}
