@@ -70,7 +70,6 @@ class WordScrambleGame {
   }
 
   displayMessage(message, isCorrect) {
-    // Simple alert message for displaying feedback
     if (isCorrect) {
       alert(message);
     } else {

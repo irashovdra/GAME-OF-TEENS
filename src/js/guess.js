@@ -1,5 +1,3 @@
-// script.js
-
 const guessClueText = document.querySelector(".guess-clue-text");
 const guessInput = document.querySelector(".guess-input");
 const guessButton = document.querySelector(".guess-button");
@@ -42,5 +40,4 @@ function checkGuess() {
 
 guessButton.addEventListener("click", checkGuess);
 
-// Initialize the game
 displayClue();

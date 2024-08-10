@@ -7,8 +7,7 @@
 }
 
 .word-scramble__content {
-  display: block; /* Ensure the content is displayed from the start */
-  margin: 25px 20px 35px;
+  display: block;
 }
 
 .word-scramble__word {
@@ -101,7 +100,6 @@
   text-align: center;
 }
 
-/* Mobile Styles */
 @media (max-width: 480px) {
   .word-scramble__title {
     font-size: 28px;
@@ -138,15 +136,10 @@
   }
 }
 
-/* Tablet Styles */
 @media (min-width: 481px) and (max-width: 768px) {
   .word-scramble__title {
     font-size: 32px;
     margin-bottom: 30px;
-  }
-
-  .word-scramble__content {
-    margin: 20px 15px 30px;
   }
 
   .word-scramble__word {

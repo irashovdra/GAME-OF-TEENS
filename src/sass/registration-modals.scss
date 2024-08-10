@@ -1,0 +1,116 @@
+.lesson-modal,
+.course-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lesson-modal__content,
+.course-modal__content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.lesson-modal__close,
+.course-modal__close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lesson-modal__close:hover,
+.course-modal__close:hover {
+  color: #000;
+}
+
+.lesson-modal__title,
+.course-modal__title {
+  margin-bottom: 20px;
+}
+
+.lesson-modal__label,
+.course-modal__label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.lesson-modal__input,
+.course-modal__input,
+.lesson-modal__select,
+.course-modal__select {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.lesson-modal__submit,
+.course-modal__submit {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.lesson-modal__submit:hover,
+.course-modal__submit:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+  .lesson-modal__content,
+  .course-modal__content {
+    width: 70%;
+  }
+
+  .lesson-modal__input,
+  .course-modal__input,
+  .lesson-modal__select,
+  .course-modal__select {
+    width: 90%;
+  }
+
+  .lesson-modal__submit,
+  .course-modal__submit {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .lesson-modal__content,
+  .course-modal__content {
+    width: 90%;
+  }
+
+  .lesson-modal__input,
+  .course-modal__input,
+  .lesson-modal__select,
+  .course-modal__select {
+    width: 100%;
+  }
+
+  .lesson-modal__submit,
+  .course-modal__submit {
+    width: 100%;
+  }
+}

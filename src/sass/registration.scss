@@ -1,0 +1,78 @@
+.registration {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.registration__title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.lesson-registration,
+.course-registration {
+  display: inline-block;
+  width: 48%;
+  margin: 0;
+}
+
+.lesson-registration__btn,
+.course-registration__btn {
+  display: block;
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.lesson-registration__btn:hover,
+.course-registration__btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+  .registration {
+    padding: 30px;
+  }
+
+  .registration__title {
+    font-size: 28px;
+  }
+
+  .lesson-registration__btn,
+  .course-registration__btn {
+    font-size: 16px;
+    padding: 10px;
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration {
+    padding: 20px;
+  }
+
+  .registration__title {
+    font-size: 24px;
+  }
+
+  .lesson-registration,
+  .course-registration {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .lesson-registration__btn,
+  .course-registration__btn {
+    font-size: 14px;
+    padding: 8px;
+    width: 90%;
+  }
+}

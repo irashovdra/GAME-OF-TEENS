@@ -1,7 +1,5 @@
-/* Base Styles */
 .game {
   text-align: center;
-  padding: 20px;
 }
 
 .game__title {
@@ -67,7 +65,6 @@
   background-color: #0089f7;
 }
 
-/* Mobile Styles */
 @media (max-width: 480px) {
   .game__title {
     font-size: 28px;
@@ -91,7 +88,6 @@
   }
 }
 
-/* Tablet Styles */
 @media (min-width: 481px) and (max-width: 768px) {
   .game__title {
     font-size: 32px;

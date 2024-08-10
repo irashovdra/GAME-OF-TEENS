@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const cardsArray = [
     { word: "happy", match: "joyful" },
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let secondCard = null;
   let lockBoard = false;
 
-  // Create cards
   gameArray.forEach((item) => {
     const card = document.createElement("div");
     card.classList.add("game__card");
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gameBoard.appendChild(card);
 
-    // Event listener for card click
     card.addEventListener("click", () => {
       if (lockBoard) return;
       if (card === firstCard) return;
@@ -52,14 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Check if cards match
   function checkForMatch() {
     const isMatch = firstCard.dataset.match === secondCard.dataset.word;
 
     isMatch ? disableCards() : unflipCards();
   }
 
-  // Disable matched cards
   function disableCards() {
     firstCard.classList.add("game__card--matched");
     secondCard.classList.add("game__card--matched");
@@ -67,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBoard();
   }
 
-  // Unflip cards if they don't match
   function unflipCards() {
     setTimeout(() => {
       firstCard.classList.remove("game__card--flipped");
@@ -77,12 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
-  // Reset the board
   function resetBoard() {
     [firstCard, secondCard, lockBoard] = [null, null, false];
   }
 
-  // Reset game
   resetButton.addEventListener("click", () => {
     gameArray = [
       ...cardsArray,
