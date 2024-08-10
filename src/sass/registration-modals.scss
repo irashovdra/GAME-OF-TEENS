@@ -1,5 +1,7 @@
+/* Desktop Styles (default) */
 .lesson-modal,
-.course-modal {
+.course-modal,
+.thank-you-modal {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -9,37 +11,49 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .lesson-modal__content,
-.course-modal__content {
+.course-modal__content,
+.thank-you-modal__content {
   background-color: #fff;
   margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
-  max-width: 600px;
+  max-width: 500px;
   border-radius: 8px;
   text-align: center;
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-in-out;
+  animation: slideDown 0.3s forwards;
 }
 
-.lesson-modal__close,
-.course-modal__close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-.lesson-modal__close:hover,
-.course-modal__close:hover {
-  color: #000;
+/* Show Modal Animation */
+.lesson-modal.show,
+.course-modal.show,
+.thank-you-modal.show {
+  display: block;
+  opacity: 1;
 }
 
 .lesson-modal__title,
-.course-modal__title {
+.course-modal__title,
+.thank-you-modal__title {
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .lesson-modal__label,
@@ -60,26 +74,40 @@
 }
 
 .lesson-modal__submit,
-.course-modal__submit {
+.course-modal__submit,
+.thank-you-modal__close {
   display: block;
   width: 80%;
   padding: 10px;
   background-color: #007bff;
   color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .lesson-modal__submit:hover,
-.course-modal__submit:hover {
+.course-modal__submit:hover,
+.thank-you-modal__close:hover {
   background-color: #0056b3;
 }
 
+.thank-you-modal__close {
+  font-size: 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Tablet Styles */
 @media (max-width: 1024px) {
   .lesson-modal__content,
-  .course-modal__content {
+  .course-modal__content,
+  .thank-you-modal__content {
     width: 70%;
   }
 
@@ -91,14 +119,17 @@
   }
 
   .lesson-modal__submit,
-  .course-modal__submit {
+  .course-modal__submit,
+  .thank-you-modal__close {
     width: 90%;
   }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .lesson-modal__content,
-  .course-modal__content {
+  .course-modal__content,
+  .thank-you-modal__content {
     width: 90%;
   }
 
@@ -110,7 +141,8 @@
   }
 
   .lesson-modal__submit,
-  .course-modal__submit {
+  .course-modal__submit,
+  .thank-you-modal__close {
     width: 100%;
   }
 }
