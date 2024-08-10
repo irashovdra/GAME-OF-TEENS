@@ -6,7 +6,7 @@
 
 .footer {
   background-color: rgb(0, 0, 0);
-  padding: 20px 15px;
+  padding: 30px;
   width: 100%;
 }
 
@@ -94,6 +94,10 @@
   margin-bottom: 10px;
 }
 
+.newsletter__input::placeholder {
+  font-size: 13px;
+}
+
 .newsletter__btn {
   padding: 8px 15px;
   background-color: #2196f3;
@@ -172,7 +176,7 @@
   }
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
